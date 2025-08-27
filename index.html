@@ -13,7 +13,7 @@
 <body>
 <header class="stack">
 <h1>8-week English Program</h1>
-<label>Search <input id="search" type="search" placeholder="Search days or vocab"/></label>
+<label>Search <input id="search" type="search" placeholder="Search weeks"/></label>
 <button id="dark-toggle">Dark</button>
 <nav class="grid">
 <button id="export">Export Progress</button>
@@ -23,12 +23,11 @@
 </nav>
 </header>
 <main>
-<section id="weeks" class="grid"></section>
-<section id="results" class="stack"></section>
+<section id="weeks-container" class="weeks-grid"></section>
+<p id="no-weeks" class="muted" hidden>No weeks found</p>
 </main>
 <script type="module" src="scripts/main.js"></script>
 <script type="module">
-import {load,save} from './scripts/ui/storage.js';
 const toggle=document.getElementById('dark-toggle');
 const pref=localStorage.getItem('theme');if(pref==='dark')document.body.classList.add('dark');
 function apply(){document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');}
