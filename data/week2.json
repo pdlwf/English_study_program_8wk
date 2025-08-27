@@ -1,0 +1,21 @@
+{
+  "id":2,
+  "title":"Week 2 — Timeline & Milestones",
+  "goals":["Discuss timelines","Use milestone language"],
+  "days":[
+    {
+      "day":1,
+      "title":"Timeline Basics",
+      "focus":"Discussing schedules",
+      "vocabulary":["timeline","milestone","slippage"],
+      "activities":[{"type":"checklist","title":"Discuss schedule","items":["Milestone","Risk"]}],
+      "quiz":{"questions":[{"q":"Milestone is?","choices":["Task","Key date","Budget"],"answer":1}]},
+      "flashcards":[{"term":"Gantt","definition":"Bar chart schedule"}],
+      "homework":["Review project timeline."],
+      "rubric":[{"dimension":"Timeline language","levels":["basic","good","excellent"]}],
+      "timebox":{"total":15,"segments":[5,10]},
+      "materials":["notebook"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

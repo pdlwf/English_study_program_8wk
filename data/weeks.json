@@ -1,0 +1,12 @@
+{
+  "weeks": [
+    {"id":1,"title":"Week 1 — Kickoff & Introductions","file":"week1.json","goals":["Confident self-introduction","Deliver stand-up updates","Master key terms"]},
+    {"id":2,"title":"Week 2 — Timeline & Milestones","file":"week2.json","goals":["Discuss timelines","Use milestone language"]},
+    {"id":3,"title":"Week 3 — Supplier Coordination","file":"week3.json","goals":["Clarify supplier updates"]},
+    {"id":4,"title":"Week 4 — Risk & Escalation","file":"week4.json","goals":["Raise issues early"]},
+    {"id":5,"title":"Week 5 — Quality Metrics","file":"week5.json","goals":["Use quality KPIs"]},
+    {"id":6,"title":"Week 6 — Reporting","file":"week6.json","goals":["Summarize progress"]},
+    {"id":7,"title":"Week 7 — Negotiations","file":"week7.json","goals":["Practice negotiations"]},
+    {"id":8,"title":"Week 8 — Final Simulation & Review","file":"week8.json","goals":["Simulate project delivery"]}
+  ]
+}

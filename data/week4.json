@@ -1,0 +1,21 @@
+{
+  "id":4,
+  "title":"Week 4 — Risk & Escalation",
+  "goals":["Raise issues early"],
+  "days":[
+    {
+      "day":1,
+      "title":"Risk Language",
+      "focus":"Discussing potential problems",
+      "vocabulary":["risk","escalate"],
+      "activities":[{"type":"write","title":"Risk note","duration":5,"instructions":"State issue and impact."}],
+      "quiz":{"questions":[{"q":"Escalate means…","choices":["Ignore","Raise to higher level","Celebrate"],"answer":1}]},
+      "flashcards":[{"term":"mitigation","definition":"Plan to reduce risk"}],
+      "homework":["List top 3 project risks."],
+      "rubric":[{"dimension":"Risk clarity","levels":["low","medium","high"]}],
+      "timebox":{"total":12,"segments":[6,6]},
+      "materials":["notebook"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

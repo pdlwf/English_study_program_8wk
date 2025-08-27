@@ -1,0 +1,38 @@
+<!-- README: Static 8-week English program. Load index.html in modern browser. Progress stored locally. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="assets/favicon.svg" />
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/components.css" />
+<title>English Program</title>
+</head>
+<body>
+<header class="stack">
+<h1>8-week English Program</h1>
+<label>Search <input id="search" type="search" placeholder="Search days or vocab"/></label>
+<button id="dark-toggle">Dark</button>
+<nav class="grid">
+<button id="export">Export Progress</button>
+<input id="import" type="file" class="no-print"/>
+<button id="reset">Reset Progress</button>
+<button onclick="window.print()">Print</button>
+</nav>
+</header>
+<main>
+<section id="weeks" class="grid"></section>
+<section id="results" class="stack"></section>
+</main>
+<script type="module" src="scripts/main.js"></script>
+<script type="module">
+import {load,save} from './scripts/ui/storage.js';
+const toggle=document.getElementById('dark-toggle');
+const pref=localStorage.getItem('theme');if(pref==='dark')document.body.classList.add('dark');
+function apply(){document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');}
+toggle.addEventListener('click',apply);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* Reset & base styles */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:var(--font-base);line-height:var(--line-height);background:var(--bg);color:var(--ink);}
+body{min-height:100vh;}
+a{color:var(--tint);text-decoration:none;}
+a:hover{opacity:.8;}
+button{font:inherit;border:none;background:var(--tint);color:#fff;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);cursor:pointer;}
+button:disabled{opacity:.5;cursor:not-allowed;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+/* Utilities */
+.grid{display:grid;gap:var(--space-3);}
+.stack>*+*{margin-top:var(--space-3);}
+.muted{color:var(--muted);}
+.pill{padding:2px 8px;border-radius:999px;background:var(--muted);color:#fff;font-size:0.75rem;}
+
+@media print{
+  header,nav,button,.no-print{display:none!important;}
+  body{background:#fff;color:#000;}
+}

@@ -1,0 +1,21 @@
+{
+  "id":7,
+  "title":"Week 7 — Negotiations",
+  "goals":["Practice negotiations"],
+  "days":[
+    {
+      "day":1,
+      "title":"Negotiation Phrases",
+      "focus":"Making and countering offers",
+      "vocabulary":["counteroffer","leverage"],
+      "activities":[{"type":"roleplay","title":"Price discussion","duration":10,"instructions":"Negotiate discount"}],
+      "quiz":{"questions":[{"q":"Leverage means…","choices":["Weakness","Advantage","Document"],"answer":1}]},
+      "flashcards":[{"term":"BATNA","definition":"Best alternative to a negotiated agreement"}],
+      "homework":["List your negotiation goals."],
+      "rubric":[{"dimension":"Assertiveness","levels":["low","balanced","high"]}],
+      "timebox":{"total":12,"segments":[6,6]},
+      "materials":["script"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

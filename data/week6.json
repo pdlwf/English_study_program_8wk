@@ -1,0 +1,21 @@
+{
+  "id":6,
+  "title":"Week 6 — Reporting",
+  "goals":["Summarize progress"],
+  "days":[
+    {
+      "day":1,
+      "title":"Status Summaries",
+      "focus":"Condensing information",
+      "vocabulary":["summary","highlight"],
+      "activities":[{"type":"write","title":"Weekly summary","duration":10,"instructions":"3 bullets"}],
+      "quiz":{"questions":[{"q":"A summary is…","choices":["Detailed log","Brief statement","Future plan"],"answer":1}]},
+      "flashcards":[{"term":"executive summary","definition":"Top level overview"}],
+      "homework":["Draft report highlight."],
+      "rubric":[{"dimension":"Brevity","levels":["wordy","clear","succinct"]}],
+      "timebox":{"total":15,"segments":[10,5]},
+      "materials":["notebook"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

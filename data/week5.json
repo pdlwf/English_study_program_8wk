@@ -1,0 +1,21 @@
+{
+  "id":5,
+  "title":"Week 5 — Quality Metrics",
+  "goals":["Use quality KPIs"],
+  "days":[
+    {
+      "day":1,
+      "title":"Quality Terms",
+      "focus":"Talking about defects",
+      "vocabulary":["FPY","PPM"],
+      "activities":[{"type":"speak","title":"Defect report","duration":5,"instructions":"Use FPY and PPM."}],
+      "quiz":{"questions":[{"q":"FPY stands for…","choices":["First Pass Yield","Fast Production Year","Final Product Yield"],"answer":0}]},
+      "flashcards":[{"term":"rework","definition":"Fixing defective parts"}],
+      "homework":["Collect last month's FPY."],
+      "rubric":[{"dimension":"Metric usage","levels":["low","medium","high"]}],
+      "timebox":{"total":10,"segments":[5,5]},
+      "materials":["report"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}
