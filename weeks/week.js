@@ -68,6 +68,46 @@ function renderGoals(goals) {
 
 function renderDays(days) {
   const container = document.getElementById('days');
+
+  function pauseTimers(panel) {
+    panel.querySelectorAll('.timer').forEach((t) => t.pause && t.pause());
+  }
+
+  // event-delegated accordion handling
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.acc-trigger');
+    if (!btn) return;
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.hidden = true;
+      pauseTimers(panel);
+    } else {
+      container.querySelectorAll('.acc-trigger').forEach((b) => {
+        const p = document.getElementById(b.getAttribute('aria-controls'));
+        if (b !== btn) {
+          b.setAttribute('aria-expanded', 'false');
+          p.hidden = true;
+          pauseTimers(p);
+        }
+      });
+      btn.setAttribute('aria-expanded', 'true');
+      panel.hidden = false;
+      location.hash = btn.id.replace('acc-trigger-', '');
+    }
+  });
+
+  container.addEventListener('keydown', (e) => {
+    if (
+      e.target.classList.contains('acc-trigger') &&
+      (e.key === ' ' || e.key === 'Enter')
+    ) {
+      e.preventDefault();
+      e.target.click();
+    }
+  });
+
   days.forEach((dayObj, idx) => {
     const dayNum = dayObj.day;
     const content = document.createElement('div');
@@ -150,6 +190,7 @@ function renderDays(days) {
           const timer = Timer({
             seconds: secs,
             storageKey: `w${weekId}d${dayNum}.${act.title}`,
+            onTick: (t) => setDay(weekId, dayNum, { timerSecs: secs - t }),
           });
           card.appendChild(timer);
         }
@@ -299,16 +340,7 @@ function renderDays(days) {
       { id: `day-${dayNum}`, title: `Day ${dayNum}: ${dayObj.title}` },
       content,
     );
-    acc.addEventListener('accordion:open', (e) => {
-      // close siblings
-      document.querySelectorAll('.accordion .acc-trigger').forEach((btn) => {
-        if (btn !== e.target) {
-          btn.setAttribute('aria-expanded', 'false');
-          document.getElementById(btn.getAttribute('aria-controls')).hidden = true;
-        }
-      });
-      location.hash = `day-${dayNum}`;
-    });
+    acc.id = `day-${dayNum}`;
     container.appendChild(acc);
 
     updateDayBadge(dayNum);
@@ -317,7 +349,7 @@ function renderDays(days) {
 }
 
 function updateDayBadge(day) {
-  const btn = document.querySelector(`#day-${day} .acc-trigger`);
+  const btn = document.getElementById(`acc-trigger-day-${day}`);
   if (!btn) return;
   const badge = btn.querySelector('.badges');
   const data = getDay(weekId, day);
@@ -351,15 +383,15 @@ function updateGlance() {
 }
 
 function openDay(n) {
-  const trigger = document.querySelector(`#day-${n} .acc-trigger`);
+  const trigger = document.getElementById(`acc-trigger-day-${n}`);
   if (trigger) {
-    trigger.click();
-    document.getElementById(`day-${n}`).scrollIntoView();
+    if (trigger.getAttribute('aria-expanded') !== 'true') trigger.click();
+    trigger.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
 function updateCompletion(day) {
-  const btn = document.querySelector(`#day-${day} .day-footer button`);
+  const btn = document.querySelector(`#acc-panel-day-${day} .day-footer button`);
   if (!btn) return;
   let ok = true;
   const data = getDay(weekId, day);
@@ -368,20 +400,35 @@ function updateCompletion(day) {
       ok = data.quiz && data.homework && Object.values(data.homework).some(Boolean);
       break;
     case 2:
-      ok = data.quiz && data.checklist && Object.values(data.checklist).some(Boolean);
+      const len2 = (data.notes || '').trim().length;
+      ok =
+        data.quiz &&
+        len2 >= 60 &&
+        data.checklist &&
+        Object.values(data.checklist).some(Boolean);
       break;
     case 3:
-      ok = data.quiz && data.quiz.best && data.quiz.best / data.quiz.total >= 0.8;
+      const len3 = (data.notes || '').trim().length;
+      const quizOk =
+        data.quiz && data.quiz.best && data.quiz.best / data.quiz.total >= 0.8;
+      const chkOk = data.checklist && Object.values(data.checklist).every(Boolean);
+      ok = len3 >= 50 && (quizOk || chkOk);
       break;
     case 4:
-      ok = Boolean(data.quiz);
+      ok =
+        Boolean(data.quiz) &&
+        data.roleplay &&
+        data.roleplay.filter((r) => r && r.trim().length > 0).length >= 3;
       break;
     case 5:
       const used = data.flash ? Object.values(data.flash).filter((v) => v === 'mastered').length : 0;
       ok = data.quiz && used >= 5;
       break;
     case 6:
-      ok = Boolean(data.quiz);
+      ok =
+        Boolean(data.quiz) &&
+        (data.timerSecs || 0) > 0 &&
+        (data.notes || '').trim().length >= 120;
       break;
     case 7:
       ok = data.quiz && data.checklist && Object.values(data.checklist).every(Boolean);

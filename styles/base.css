@@ -16,6 +16,9 @@ img{max-width:100%;display:block;}
 .pill{padding:2px 8px;border-radius:999px;background:var(--muted);color:#fff;font-size:0.75rem;}
 
 @media print{
-  header,nav,button,.no-print{display:none!important;}
+  header,nav,.no-print{display:none!important;}
+  button{display:none;}
+  .acc-trigger{display:block;}
+  .acc-trigger[aria-expanded="false"],.acc-panel[hidden]{display:none;}
   body{background:#fff;color:#000;}
 }

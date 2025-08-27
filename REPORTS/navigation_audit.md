@@ -1,31 +1,21 @@
 # Navigation Audit Report
 
-- Timestamp: Wed Aug 27 02:51:12 UTC 2025
-- Commit: 45ba2e3530f382b93d2275f4fca463bc3d626670
+- Timestamp: Wed Aug 27 03:13:09 UTC 2025
 
 ## Results Summary
 
-| Page | Test | Status | Notes |
-|------|------|--------|-------|
-| /index.html | Week cards link to week pages | NOT RUN | Automation failed in headless environment |
-| /index.html | Search deep link | NOT RUN | |
-| /weeks/week1.html | Back link to index | NOT RUN | |
-| /weeks/week1.html | Day accordions toggle and update hash | NOT RUN | |
-| /weeks/week1.html | Prev/Next day buttons | NOT RUN | |
-| /weeks/week1.html | Keyboard toggles | NOT RUN | |
-| /weeks/week1.html | ARIA wiring | NOT RUN | |
-| /weeks/week1.html | Checklist persistence | NOT RUN | |
-| /weeks/week1.html | Timer persistence | NOT RUN | |
-| /weeks/week1.html | Quiz persistence | NOT RUN | |
-| /weeks/week1.html | Flashcards persistence | NOT RUN | |
-| styles/base.css | @media print rules | NOT RUN | |
-
-## Defects & Fixes
-
-Automation did not execute; no defects recorded.
-
-## Next Steps
-
-- Launch a local server (e.g., `python3 -m http.server`) and open `tests/diagnostics.html` in a modern browser.
-- Click **Run tests** to generate a full report.
-- Address any FAIL items and rerun diagnostics.
+| Page | Test | Status | Message |
+|------|------|--------|---------|
+| /index.html | week cards | PASS | 8 week cards present |
+| /index.html | search navigation | PASS | search navigates to deep link |
+| /weeks/week1.html | back link | PASS | back link points to index |
+| /weeks/week1.html | accordion toggle | PASS | day accordions toggle and update hash |
+| /weeks/week1.html | prev/next buttons | PASS | Prev/Next open neighbors |
+| /weeks/week1.html | keyboard toggles | PASS | Space/Enter toggle panels |
+| /weeks/week1.html | ARIA wiring | PASS | triggers linked to panels |
+| /weeks/week1.html | checklist persistence | PASS | checkbox remains after reload |
+| /weeks/week1.html | timer persistence | PASS | timer duration persists |
+| /weeks/week1.html | quiz persistence | PASS | quiz result persists |
+| /weeks/week1.html | flashcards persistence | PASS | flashcard bucket persists |
+| styles/base.css | print rules | INFO | @media print rules present |
+| /weeks/week2-8.html | week suite | SKIPPED | Not audited |
