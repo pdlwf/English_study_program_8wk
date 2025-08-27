@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Navigation Diagnostics</title>
+<link rel="stylesheet" href="../styles/tokens.css" />
+<style>
+body{display:flex;font-family:sans-serif;min-height:100vh;margin:0}
+#sidebar{width:200px;border-right:1px solid #ccc;padding:1rem;box-sizing:border-box}
+#main{flex:1;padding:1rem;overflow:auto}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ccc;padding:0.25rem;font-size:0.8rem}
+.pass{background:#e0ffe0}
+.fail{background:#ffe0e0}
+.info{background:#e0f0ff}
+.skipped{background:#fff8e0}
+</style>
+</head>
+<body>
+<div id="sidebar">
+<button id="run">Run tests</button>
+<button id="rerun">Re-run</button>
+<button id="download-json">Download JSON</button>
+<button id="copy-summary">Copy summary</button>
+</div>
+<div id="main">
+<table id="results"><thead><tr><th>Page</th><th>Test</th><th>Status</th><th>Message</th></tr></thead><tbody></tbody></table>
+<iframe id="frame" style="width:0;height:0;border:0;"></iframe>
+</div>
+<script type="module" src="./diagnostics.js"></script>
+</body>
+</html>
