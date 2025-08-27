@@ -1,14 +1,111 @@
-import {Card,ProgressRing,Toast} from './ui/components.js';
-import {load} from './ui/storage.js';
-import {exportProgress,importProgress,resetProgress} from './ui/export.js';
+import { ProgressRing, Toast } from './ui/components.js';
+import { getProgress } from './ui/storage.js';
+import { exportProgress, importProgress, resetProgress } from './ui/export.js';
 
-let searchIndex=null;
-async function init(){const res=await fetch('data/weeks.json');const data=await res.json();const grid=document.querySelector('#weeks');data.weeks.forEach(w=>{const body=document.createElement('div');const ul=document.createElement('ul');(w.goals||[]).forEach(g=>{const li=document.createElement('li');li.textContent=g;ul.appendChild(li);});body.appendChild(ul);const progress=ProgressRing(0);body.appendChild(progress);const btn=document.createElement('a');btn.href=`weeks/week${w.id}.html`;btn.textContent='Open';body.appendChild(btn);const card=Card(w.title,body);grid.appendChild(card);});setupToolbar();document.getElementById('search').addEventListener('input',onSearch);}
+let weeksData = [];
 
-async function buildIndex(){if(searchIndex)return searchIndex;const weeks=await (await fetch('data/weeks.json')).json();const arr=[];for(const w of weeks.weeks){const d=await (await fetch(`data/week${w.id}.json`)).json();d.days.forEach(day=>{arr.push({week:w.id,day:day.day,title:day.title,focus:day.focus,vocab: (day.vocabulary||[]).join(' '),templates:(day.templates||[]).join(' ')});});}searchIndex=arr;return arr;}
+async function init() {
+  const res = await fetch('data/weeks.json');
+  const data = await res.json();
+  weeksData = data.weeks;
+  const container = document.getElementById('weeks-container');
+  for (const w of weeksData) {
+    const card = await createWeekCard(w);
+    container.appendChild(card);
+  }
+  setupToolbar();
+  document.getElementById('search').addEventListener('input', onSearch);
+}
 
-async function onSearch(e){const q=e.target.value.toLowerCase();const resDiv=document.getElementById('results');resDiv.innerHTML='';if(!q)return;const idx=await buildIndex();idx.filter(item=>[item.title,item.focus,item.vocab,item.templates].some(t=>t.toLowerCase().includes(q))).forEach(item=>{const a=document.createElement('a');a.href=`weeks/week${item.week}.html#day-${item.day}`;a.textContent=`Week ${item.week} Day ${item.day}: ${item.title}`;resDiv.appendChild(a);});}
+async function createWeekCard(week) {
+  const card = document.createElement('div');
+  card.className = 'week-card card';
 
-function setupToolbar(){document.querySelector('#export').addEventListener('click',exportProgress);document.querySelector('#import').addEventListener('change',e=>importProgress(e.target.files[0]));document.querySelector('#reset').addEventListener('click',()=>{resetProgress();Toast('Progress reset');});}
+  const title = document.createElement('h2');
+  title.textContent = week.title;
+  card.appendChild(title);
+
+  const goals = document.createElement('ul');
+  try {
+    const weekData = await (await fetch(`data/${week.file}`)).json();
+    (weekData.goals || []).slice(0, 3).forEach((g) => {
+      const li = document.createElement('li');
+      li.textContent = g;
+      goals.appendChild(li);
+    });
+    if (goals.children.length === 0) {
+      const li = document.createElement('li');
+      li.textContent = 'Goals coming soon';
+      goals.appendChild(li);
+    }
+  } catch {
+    const li = document.createElement('li');
+    li.textContent = 'Goals coming soon';
+    goals.appendChild(li);
+  }
+  card.appendChild(goals);
+
+  const footer = document.createElement('div');
+  footer.className = 'card-footer';
+  const ring = ProgressRing(getCompletion(week.id));
+  footer.appendChild(ring);
+  const open = document.createElement('a');
+  open.className = 'open-btn';
+  open.href = `weeks/week${week.id}.html`;
+  open.textContent = 'Open';
+  footer.appendChild(open);
+  card.appendChild(footer);
+
+  return card;
+}
+
+function getCompletion(id) {
+  const progress = getProgress(id);
+  const done = Object.values(progress.days || {}).filter((d) => d.done).length;
+  return (done / 7) * 100;
+}
+
+function setupToolbar() {
+  document.getElementById('export').addEventListener('click', exportProgress);
+  document
+    .getElementById('import')
+    .addEventListener('change', (e) => importProgress(e.target.files[0]));
+  document.getElementById('reset').addEventListener('click', () => {
+    resetProgress();
+    Toast('Progress reset');
+  });
+}
+
+ // Filter week cards by title or goals
+ function onSearch(e) {
+  const q = e.target.value.toLowerCase();
+  let matches = 0;
+  const cards = document.querySelectorAll('.week-card');
+  weeksData.forEach((w, idx) => {
+    const card = cards[idx];
+    const text = (w.title + ' ' + (w.goals || []).join(' ')).toLowerCase();
+    if (!q || text.includes(q)) {
+      card.hidden = false;
+      highlight(card, q);
+      matches++;
+    } else {
+      card.hidden = true;
+    }
+  });
+  document.getElementById('no-weeks').hidden = matches !== 0;
+}
+
+function highlight(card, q) {
+  const els = card.querySelectorAll('h2, li');
+  els.forEach((el) => {
+    const text = el.textContent;
+    if (!q) {
+      el.innerHTML = text;
+      return;
+    }
+    const re = new RegExp(`(${q})`, 'gi');
+    el.innerHTML = text.replace(re, '<mark>$1</mark>');
+  });
+}
 
 init();
