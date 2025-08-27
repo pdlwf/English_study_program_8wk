@@ -11,9 +11,16 @@
 </head>
 <body>
 <header class="topbar">
-  <a href="../index.html" class="back">← Back to Main</a>
-  <h1 id="week-title" class="muted"></h1>
-  <button id="dark-toggle" class="no-print">🌓</button>
+  <a href="../index.html" class="btn plain compact back" aria-label="Back">
+    <svg viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 4 4 10l4 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <div class="titles">
+    <h1 id="week-title"></h1>
+    <p class="subtitle muted">Week overview</p>
+  </div>
+  <button id="dark-toggle" class="btn tinted compact no-print" aria-label="Toggle dark mode">🌓</button>
 </header>
 <main class="stack">
   <section id="goals" class="stack"></section>
