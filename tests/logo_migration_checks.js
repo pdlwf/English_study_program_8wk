@@ -20,32 +20,34 @@ function assertNoLegacyLogoRefs(){
     'scripts/ui/components.js','scripts/ui/export.js','scripts/ui/timers.js',
     'scripts/ui/quiz.js','scripts/ui/storage.js','scripts/ui/flashcards.js'
   ];
-  const legacy = /(assets\/favicon\.svg|assets\/brand\/favicon\.svg|logo\.(png|jpe?g)|data:image\/svg\+xml|longcheer-logo(?!-horiz\.svg|-mark\.svg))/i;
-  files.forEach(f=>{
+  const legacy = /(?<!longcheer-)logo[^"']*\.(png|jpe?g|svg)|favicon\.svg|favicon\.ico|data:image\/svg\+xml/gi;
+  files.forEach(f => {
     const text = read(f);
-    const match = text.match(legacy);
-    assert(!match, f, 'legacy logo scan', match?`Found ${match[0]}`:'');
+    const matches = [...text.matchAll(legacy)];
+    const bad = matches.find(m => !m[0].includes('longcheer-logo-horiz.png') && !m[0].includes('longcheer-logo-mark.png'));
+    assert(!bad, f, 'legacy logo scan', bad ? `Found ${bad[0]}` : '');
   });
 }
 
-function assertHeaderLogoPresent(file){
+function assertHeaderLogo(file){
   const html = read(file);
-  const ok = /<img(?=[^>]*class="[^"]*brand-logo[^"]*")(?=[^>]*src="\/assets\/brand\/longcheer-logo-horiz.svg")(?=[^>]*alt="Longcheer")[^>]*>/i.test(html);
+  const ok = /<img(?=[^>]*class="[^"]*brand-logo[^"]*")(?=[^>]*src="\/assets\/brand\/longcheer-logo-horiz.png")(?=[^>]*alt="Longcheer")[^>]*>/i.test(html);
   assert(ok, file, 'header logo present', 'missing or incorrect');
 }
 
-function assertFaviconUpdated(file){
+function assertFavicons(file){
   const html = read(file);
-  const ok = /<link[^>]*rel="icon"[^>]*href="\/assets\/brand\/longcheer-logo-mark.svg"/i.test(html);
-  assert(ok, file, 'favicon updated', 'missing or incorrect');
+  const icon = /<link(?=[^>]*rel="icon")(?=[^>]*href="\/assets\/brand\/longcheer-logo-mark.png")(?=[^>]*type="image\/png")/i.test(html);
+  const apple = /<link(?=[^>]*rel="apple-touch-icon")(?=[^>]*href="\/assets\/brand\/longcheer-logo-mark.png")/i.test(html);
+  assert(icon && apple, file, 'favicon updated', 'missing or incorrect');
 }
 
 function run(){
   assertNoLegacyLogoRefs();
-  assertHeaderLogoPresent('index.html');
-  assertHeaderLogoPresent('weeks/week1.html');
-  assertFaviconUpdated('index.html');
-  assertFaviconUpdated('weeks/week1.html');
+  assertHeaderLogo('index.html');
+  assertHeaderLogo('weeks/week1.html');
+  assertFavicons('index.html');
+  assertFavicons('weeks/week1.html');
   fs.mkdirSync(path.join(root,'REPORTS'),{recursive:true});
   fs.writeFileSync(path.join(root,'REPORTS','logo_migration_report.json'), JSON.stringify(results, null, 2));
   const lines = ['# Logo Migration Report','',`- Timestamp: ${new Date().toISOString()}`,'','| Page | Test | Status | Message |','|------|------|--------|---------|'];

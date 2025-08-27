@@ -276,46 +276,46 @@ async function assertNoLegacyLogoRefs() {
     '/scripts/ui/storage.js',
     '/scripts/ui/flashcards.js',
   ];
-  const legacy = /(assets\/favicon\.svg|assets\/brand\/favicon\.svg|logo\.(png|jpe?g)|data:image\/svg\+xml|longcheer-logo(?!-horiz\.svg|-mark\.svg))/i;
+  const legacy = /(?<!longcheer-)logo[^"']*\.(png|jpe?g|svg)|favicon\.svg|favicon\.ico|data:image\/svg\+xml/gi;
   for (const file of files) {
     const text = await (await fetch(file)).text();
-    const match = text.match(legacy);
-    assert(!match, 'no legacy logo refs', {
+    const matches = [...text.matchAll(legacy)];
+    const bad = matches.find((m) => !m[0].includes('longcheer-logo-horiz.png') && !m[0].includes('longcheer-logo-mark.png'));
+    assert(!bad, 'no legacy logo refs', {
       page: file,
       test: 'legacy logo scan',
-      message: match ? `Found ${match[0]}` : ''
+      message: bad ? `Found ${bad[0]}` : ''
     });
   }
 }
 
-async function assertHeaderLogoPresent(page) {
+async function assertHeaderLogo(page) {
   await withPage(page, async (win, doc) => {
     const logo = doc.querySelector('header img.brand-logo');
     assert(
-      logo && logo.getAttribute('alt') && logo.getAttribute('src') === '/assets/brand/longcheer-logo-horiz.svg',
+      logo && logo.getAttribute('alt') && logo.getAttribute('alt').trim().length > 0 && logo.getAttribute('src') === '/assets/brand/longcheer-logo-horiz.png',
       'header logo present',
       { page, test: 'header logo present' }
     );
   });
 }
 
-async function assertFaviconUpdated(page) {
+async function assertFavicons(page) {
   await withPage(page, async (win, doc) => {
-    const link = doc.querySelector('link[rel="icon"]');
-    assert(
-      link && link.getAttribute('href') === '/assets/brand/longcheer-logo-mark.svg',
-      'favicon uses mark svg',
-      { page, test: 'favicon updated' }
-    );
+    const icon = doc.querySelector('link[rel="icon"]');
+    const apple = doc.querySelector('link[rel="apple-touch-icon"]');
+    const ok = icon && icon.getAttribute('href') === '/assets/brand/longcheer-logo-mark.png' && icon.getAttribute('type') === 'image/png'
+      && apple && apple.getAttribute('href') === '/assets/brand/longcheer-logo-mark.png';
+    assert(ok, 'favicons updated', { page, test: 'favicon updated' });
   });
 }
 
 async function runLogoDiagnostics() {
   await assertNoLegacyLogoRefs();
-  await assertHeaderLogoPresent('/index.html');
-  await assertHeaderLogoPresent('/weeks/week1.html');
-  await assertFaviconUpdated('/index.html');
-  await assertFaviconUpdated('/weeks/week1.html');
+  await assertHeaderLogo('/index.html');
+  await assertHeaderLogo('/weeks/week1.html');
+  await assertFavicons('/index.html');
+  await assertFavicons('/weeks/week1.html');
 }
 
 export async function runAll() {
