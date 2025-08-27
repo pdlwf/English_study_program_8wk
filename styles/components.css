@@ -7,10 +7,19 @@
 .accordion-content.open{display:block;}
 .progress-ring{width:48px;height:48px;}
 .toast{position:fixed;bottom:var(--space-4);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--card);padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);}
+.copy{margin-left:var(--space-2);}
 .tabs{display:flex;border-bottom:1px solid var(--shadow);} .tabs button{flex:1;background:none;color:inherit;padding:var(--space-2);} .tabs button[aria-selected="true"]{border-bottom:2px solid var(--tint);}
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.4);} .modal.open{display:flex;} .modal-content{background:var(--card);padding:var(--space-4);border-radius:var(--radius-lg);max-width:90%;}
 .checklist li{display:flex;align-items:center;margin-bottom:var(--space-2);} .checklist input{margin-right:var(--space-2);} 
 .timer-display{font-size:2rem;text-align:center;margin-bottom:var(--space-2);} 
-.quiz-question{margin-bottom:var(--space-3);} 
-.flashcard{border:1px solid var(--shadow);padding:var(--space-4);text-align:center;border-radius:var(--radius-lg);cursor:pointer;} 
-.rubric-row{display:flex;align-items:center;margin-bottom:var(--space-2);} .rubric-row label{flex:1;} .rubric-row select{margin-left:var(--space-2);} 
+.quiz-question{margin-bottom:var(--space-3);}
+.flashcard{border:1px solid var(--shadow);padding:var(--space-4);text-align:center;border-radius:var(--radius-lg);cursor:pointer;}
+.rubric-row{display:flex;align-items:center;margin-bottom:var(--space-2);} .rubric-row label{flex:1;} .rubric-row select{margin-left:var(--space-2);}
+.topbar{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);}
+.glance{display:flex;align-items:center;gap:var(--space-3);margin:var(--space-3) 0;}
+.day-footer{display:flex;gap:var(--space-2);margin-top:var(--space-4);}
+.day-footer button.success{background:var(--tint);color:var(--card);}
+
+@media print{
+  .topbar,.day-footer,.glance .progress-ring{display:none;}
+}
