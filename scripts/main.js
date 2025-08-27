@@ -50,7 +50,7 @@ async function createWeekCard(week) {
   const ring = ProgressRing(getCompletion(week.id));
   footer.appendChild(ring);
   const open = document.createElement('a');
-  open.className = 'btn filled';
+  open.className = 'btn btn--primary';
   open.href = `weeks/week${week.id}.html`;
   open.textContent = 'Open';
   footer.appendChild(open);

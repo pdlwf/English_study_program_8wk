@@ -1,4 +1,4 @@
-/* Human Interface Guidelines design tokens */
+/* Longcheer design tokens */
 :root {
   color-scheme: light dark;
 
@@ -28,52 +28,75 @@
 
   /* Radii */
   --radius-card: 12px;
-  --radius-button: 10px;
+  --radius-button: 12px;
   --radius-input: 8px;
 
   /* Motion */
   --transition: 160ms ease-out;
 
-  /* Color roles - light */
-  --bg: #F5F5F7;
-  --bg-elevated: #FFFFFF;
+  /* Brand */
+  --brand-red: #D62828;
+  --brand-red-ink: #FFFFFF;
+  --brand-red-hover: #B71C1C;
+  --brand-red-tint: #E85D5D;
+
+  /* Surfaces */
+  --bg: #FFFFFF;
+  --bg-alt: #F7F7F9;
   --card: #FFFFFF;
-  --separator: rgba(60,60,67,.29);
-  --label: #1C1C1E;
-  --secondary-label: rgba(60,60,67,.6);
-  --tertiary-label: rgba(60,60,67,.3);
-  --link: #0A84FF;
-  --tint: #0A84FF;
+
+  /* Text */
+  --label: #171717;
+  --secondary: #6B7280;
+  --muted: #9CA3AF;
+
+  /* Lines/Fills */
+  --separator: rgba(23,23,23,0.12);
   --fill: #F2F2F7;
-  --shadow: 0 8px 20px rgba(0,0,0,.08);
+
+  /* Shadow */
+  --shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
+/* DARK MODE */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000000;
-    --bg-elevated: #1C1C1E;
-    --card: #1C1C1E;
-    --separator: rgba(84,84,88,.65);
-    --label: #FFFFFF;
-    --secondary-label: rgba(235,235,245,.6);
-    --tertiary-label: rgba(235,235,245,.3);
-    --link: #0A84FF;
-    --tint: #0A84FF;
+    --brand-red: #D03030;
+    --brand-red-ink: #FFFFFF;
+    --brand-red-hover: #B02525;
+    --brand-red-tint: #EF6A6A;
+
+    --bg: #0B0B0C;
+    --bg-alt: #131316;
+    --card: #18181B;
+
+    --label: #F5F5F5;
+    --secondary: #C7C7CC;
+    --muted: #A1A1AA;
+
+    --separator: rgba(255,255,255,0.16);
     --fill: #2C2C2E;
-    --shadow: 0 8px 20px rgba(0,0,0,.55);
+
+    --shadow: 0 12px 28px rgba(0,0,0,0.55);
   }
 }
 
 body.dark {
-  --bg: #000000;
-  --bg-elevated: #1C1C1E;
-  --card: #1C1C1E;
-  --separator: rgba(84,84,88,.65);
-  --label: #FFFFFF;
-  --secondary-label: rgba(235,235,245,.6);
-  --tertiary-label: rgba(235,235,245,.3);
-  --link: #0A84FF;
-  --tint: #0A84FF;
+  --brand-red: #D03030;
+  --brand-red-ink: #FFFFFF;
+  --brand-red-hover: #B02525;
+  --brand-red-tint: #EF6A6A;
+
+  --bg: #0B0B0C;
+  --bg-alt: #131316;
+  --card: #18181B;
+
+  --label: #F5F5F5;
+  --secondary: #C7C7CC;
+  --muted: #A1A1AA;
+
+  --separator: rgba(255,255,255,0.16);
   --fill: #2C2C2E;
-  --shadow: 0 8px 20px rgba(0,0,0,.55);
+
+  --shadow: 0 12px 28px rgba(0,0,0,0.55);
 }

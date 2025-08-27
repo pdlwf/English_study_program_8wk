@@ -17,7 +17,7 @@ export function Toast(msg) {
 // Copy button with toast feedback -------------------------------------
 export function CopyButton(text) {
   const btn = document.createElement('button');
-  btn.className = 'btn tinted compact copy';
+  btn.className = 'btn btn--tinted compact copy';
   btn.textContent = 'Copy';
   btn.addEventListener('click', () => {
     navigator.clipboard.writeText(text).then(() => Toast('Copied'));
@@ -89,7 +89,7 @@ export function ProgressRing(percent = 0) {
 
   const fg = document.createElementNS(svg.namespaceURI, 'path');
   fg.setAttribute('d', 'M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32');
-  fg.setAttribute('stroke', 'var(--tint)');
+  fg.setAttribute('stroke', 'var(--brand-red)');
   fg.setAttribute('stroke-width', '4');
   fg.setAttribute('fill', 'none');
   fg.setAttribute('stroke-linecap', 'round');
@@ -148,10 +148,10 @@ export function Timer({ seconds = 60, storageKey, onComplete, onTick }) {
   const controls = document.createElement('div');
   controls.className = 'timer-controls';
   const start = document.createElement('button');
-  start.className = 'btn tinted compact';
+  start.className = 'btn btn--tinted compact';
   start.textContent = 'Start';
   const reset = document.createElement('button');
-  reset.className = 'btn tinted compact';
+  reset.className = 'btn btn--tinted compact';
   reset.textContent = 'Reset';
   controls.append(start, reset);
   container.append(display, controls);
@@ -224,11 +224,11 @@ export function Quiz({ questions, storageGet, storageSet }) {
 
   const submit = document.createElement('button');
   submit.type = 'submit';
-  submit.className = 'btn filled compact';
+  submit.className = 'btn btn--primary compact';
   submit.textContent = 'Submit';
   const retry = document.createElement('button');
   retry.type = 'button';
-  retry.className = 'btn tinted compact';
+  retry.className = 'btn btn--tinted compact';
   retry.textContent = 'Retry';
   retry.hidden = true;
   const result = document.createElement('p');
@@ -304,19 +304,19 @@ export function Flashcards({ cards, storageGet, storageSet }) {
   card.append(term, def);
 
   const prev = document.createElement('button');
-  prev.className = 'btn tinted compact';
+  prev.className = 'btn btn--tinted compact';
   prev.textContent = 'Prev';
   const next = document.createElement('button');
-  next.className = 'btn tinted compact';
+  next.className = 'btn btn--tinted compact';
   next.textContent = 'Next';
   const flip = document.createElement('button');
-  flip.className = 'btn tinted compact';
+  flip.className = 'btn btn--tinted compact';
   flip.textContent = 'Flip';
   const hard = document.createElement('button');
-  hard.className = 'btn tinted compact';
+  hard.className = 'btn btn--tinted compact';
   hard.textContent = 'Hard';
   const easy = document.createElement('button');
-  easy.className = 'btn tinted compact';
+  easy.className = 'btn btn--tinted compact';
   easy.textContent = 'Easy';
   const controls = document.createElement('div');
   controls.className = 'flash-controls';

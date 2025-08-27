@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="../assets/favicon.svg" />
+<link rel="icon" href="../assets/brand/favicon.svg" />
 <link rel="stylesheet" href="../styles/tokens.css" />
 <link rel="stylesheet" href="../styles/base.css" />
 <link rel="stylesheet" href="../styles/components.css" />
@@ -11,18 +11,20 @@
 </head>
 <body>
 <header class="topbar">
-  <a href="../index.html" class="btn plain compact back" aria-label="Back">
-    <svg viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 4 4 10l4 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </a>
-  <div class="titles">
-    <h1 id="week-title"></h1>
-    <p class="subtitle muted">Week overview</p>
+  <img src="../assets/brand/longcheer-logo-horiz.svg" alt="Longcheer" class="brand-logo" />
+  <div class="topbar-actions btn-group">
+    <button id="dark-toggle" class="btn btn--tinted compact no-print" aria-label="Toggle dark mode">🌓</button>
+    <a href="../index.html" class="btn btn--plain compact back" aria-label="Back">
+      <svg viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 4 4 10l4 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
-  <button id="dark-toggle" class="btn tinted compact no-print" aria-label="Toggle dark mode">🌓</button>
 </header>
 <main class="stack">
+  <section class="brand-hero">
+    <h1 id="week-title"></h1>
+  </section>
   <section id="goals" class="stack"></section>
   <section id="glance" class="glance" aria-label="Week progress"></section>
   <div id="days" class="stack"></div>
