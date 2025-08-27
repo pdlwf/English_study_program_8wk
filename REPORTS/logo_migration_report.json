@@ -1,0 +1,146 @@
+[
+  {
+    "page": "index.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week1.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week2.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week3.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week4.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week5.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week6.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week7.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week8.html",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "styles/tokens.css",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "styles/base.css",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "styles/components.css",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/main.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/router.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/components.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/export.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/timers.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/quiz.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/storage.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "scripts/ui/flashcards.js",
+    "test": "legacy logo scan",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "index.html",
+    "test": "header logo present",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week1.html",
+    "test": "header logo present",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "index.html",
+    "test": "favicon updated",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "page": "weeks/week1.html",
+    "test": "favicon updated",
+    "status": "PASS",
+    "message": ""
+  }
+]
