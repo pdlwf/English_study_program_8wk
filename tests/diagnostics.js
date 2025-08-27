@@ -57,6 +57,37 @@ async function runIndexTests() {
     'Search navigates to deep link',
     { page: '/index.html', test: 'search navigation' }
   );
+
+  await withPage('/', async (win, doc) => {
+    const btn = doc.createElement('button');
+    btn.className = 'btn btn--primary';
+    doc.body.appendChild(btn);
+    const swatch = doc.createElement('div');
+    swatch.style.background = 'var(--brand-red)';
+    doc.body.appendChild(swatch);
+    const btnBg = win.getComputedStyle(btn).backgroundColor;
+    const tokenBg = win.getComputedStyle(swatch).backgroundColor;
+    assert(btnBg === tokenBg, 'Primary button matches --brand-red', {
+      page: '/index.html',
+      test: 'primary button color',
+    });
+    btn.remove();
+    swatch.remove();
+
+    const hero = doc.querySelector('.brand-hero');
+    assert(Boolean(hero), '.brand-hero present', { page: '/index.html', test: 'brand hero presence' });
+    const heroColor = win.getComputedStyle(hero).color;
+    assert(heroColor === 'rgb(255, 255, 255)', '.brand-hero text is white', {
+      page: '/index.html',
+      test: 'brand hero text',
+    });
+
+    const logo = doc.querySelector('header img, header svg');
+    assert(logo && logo.getAttribute('alt') && logo.getAttribute('alt').trim().length > 0, 'Header logo has alt text', {
+      page: '/index.html',
+      test: 'header logo alt',
+    });
+  });
 }
 
 async function runWeekTests(week) {
