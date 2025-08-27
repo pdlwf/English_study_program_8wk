@@ -5,7 +5,9 @@
 .toolbar input[type="search"]{flex:1;}
 .toolbar .actions{display:flex;gap:var(--space-3);} 
 
+/* Brand logo sizing */
 .brand-logo{block-size:32px;inline-size:auto;height:32px;}
+@media (max-width:600px){.brand-logo{block-size:24px;height:24px;}}
 .brand-lockup{display:flex;align-items:center;gap:12px;}
 
 .brand-hero{background:var(--brand-red);color:var(--brand-red-ink);position:relative;border-radius:16px;box-shadow:var(--shadow);padding:var(--space-6);}

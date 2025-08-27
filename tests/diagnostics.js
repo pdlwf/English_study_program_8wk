@@ -260,12 +260,71 @@ async function runPrintSanity() {
   }
 }
 
+async function assertNoLegacyLogoRefs() {
+  const files = [
+    '/index.html',
+    ...Array.from({ length: 8 }, (_, i) => `/weeks/week${i + 1}.html`),
+    '/styles/tokens.css',
+    '/styles/base.css',
+    '/styles/components.css',
+    '/scripts/main.js',
+    '/scripts/router.js',
+    '/scripts/ui/components.js',
+    '/scripts/ui/export.js',
+    '/scripts/ui/timers.js',
+    '/scripts/ui/quiz.js',
+    '/scripts/ui/storage.js',
+    '/scripts/ui/flashcards.js',
+  ];
+  const legacy = /(assets\/favicon\.svg|assets\/brand\/favicon\.svg|logo\.(png|jpe?g)|data:image\/svg\+xml|longcheer-logo(?!-horiz\.svg|-mark\.svg))/i;
+  for (const file of files) {
+    const text = await (await fetch(file)).text();
+    const match = text.match(legacy);
+    assert(!match, 'no legacy logo refs', {
+      page: file,
+      test: 'legacy logo scan',
+      message: match ? `Found ${match[0]}` : ''
+    });
+  }
+}
+
+async function assertHeaderLogoPresent(page) {
+  await withPage(page, async (win, doc) => {
+    const logo = doc.querySelector('header img.brand-logo');
+    assert(
+      logo && logo.getAttribute('alt') && logo.getAttribute('src') === '/assets/brand/longcheer-logo-horiz.svg',
+      'header logo present',
+      { page, test: 'header logo present' }
+    );
+  });
+}
+
+async function assertFaviconUpdated(page) {
+  await withPage(page, async (win, doc) => {
+    const link = doc.querySelector('link[rel="icon"]');
+    assert(
+      link && link.getAttribute('href') === '/assets/brand/longcheer-logo-mark.svg',
+      'favicon uses mark svg',
+      { page, test: 'favicon updated' }
+    );
+  });
+}
+
+async function runLogoDiagnostics() {
+  await assertNoLegacyLogoRefs();
+  await assertHeaderLogoPresent('/index.html');
+  await assertHeaderLogoPresent('/weeks/week1.html');
+  await assertFaviconUpdated('/index.html');
+  await assertFaviconUpdated('/weeks/week1.html');
+}
+
 export async function runAll() {
   results.length = 0;
   await runIndexTests();
   await runWeekTests(1);
   await runStorageSmoke(1);
   await runPrintSanity();
+  await runLogoDiagnostics();
   for (let i = 2; i <= 8; i++) {
     record({ page: `/weeks/week${i}.html`, test: 'week suite', status: 'SKIPPED', message: 'Not audited' });
   }
@@ -302,4 +361,5 @@ window.runIndexTests = runIndexTests;
 window.runWeekTests = runWeekTests;
 window.runStorageSmoke = runStorageSmoke;
 window.runPrintSanity = runPrintSanity;
+window.runLogoDiagnostics = runLogoDiagnostics;
 window.results = results;

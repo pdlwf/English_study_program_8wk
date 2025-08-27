@@ -1,12 +1,15 @@
-<!-- LONGCHEER horizontal logo — pixel-precise wrapper -->
+<!-- longcheer-logo-horiz.svg -->
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 706 140" width="706" height="140"
+     width="499" height="98" viewBox="0 0 499 98"
      role="img" aria-labelledby="title desc">
-  <title id="title">LONGCHEER logo</title>
-  <desc id="desc">Exact rendering of the LONGCHEER horizontal logo provided by the client.</desc>
+  <title id="title">LONGCHEER — official horizontal logo</title>
+  <desc id="desc">Exact rendering of the LONGCHEER horizontal logo from provided artwork.</desc>
 
-  <!-- Use the exact artwork file you shared (PNG/WebP/SVG). Keep transparent background. -->
+  <!--
+    This uses the exact bitmap you shared, embedded inside SVG so it scales sharply on HiDPI.
+    Replace the href below with your repo path, e.g. "/assets/brand/longcheer-logo-horiz.png".
+  -->
   <image href="/assets/brand/longcheer-logo-horiz.png"
-         x="0" y="0" width="706" height="140"
+         x="0" y="0" width="499" height="98"
          preserveAspectRatio="xMidYMid meet" />
 </svg>
