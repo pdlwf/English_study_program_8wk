@@ -1,49 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!-- longcheer-logo-horiz.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-labelledby="title desc">
-  <title id="title">Longcheer Logo (Horizontal)</title>
-  <desc id="desc">Red spiral mark with LONGCHEER wordmark in dark gray.</desc>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="499" height="98" viewBox="0 0 499 98"
+     role="img" aria-labelledby="title desc">
+  <title id="title">LONGCHEER — official horizontal logo</title>
+  <desc id="desc">Exact rendering of the LONGCHEER horizontal logo from provided artwork.</desc>
 
-  <style>
-    :root{
-      --brand-red:#D62828;
-      --brand-gray:#4A4A4A;
-      --white:#FFFFFF;
-    }
-    .mark-red{fill:var(--brand-red)}
-    .ink{fill:var(--brand-gray)}
-    .white{fill:var(--white)}
-  </style>
-
-  <!-- Spiral Mark (constructed with simple shapes; transparent background) -->
-  <g transform="translate(20,20)">
-    <!-- base red disc -->
-    <circle cx="50" cy="50" r="50" class="mark-red"/>
-    <!-- inner hole to form a ring -->
-    <circle cx="50" cy="50" r="26" class="white"/>
-    <!-- crescent cuts to suggest the swirl -->
-    <path class="white" d="
-      M 72 15
-      C 42 20, 26 44, 26 64
-      c 0 26, 18 40, 38 40
-      c 16 0, 28 -8, 36 -20
-      c -8 6 -18 10 -28 10
-      c -18 0 -30 -12 -30 -28
-      c 0 -22 20 -38 50 -46
-      Z" opacity=".98"/>
-    <!-- small inner dot to complete the spiral feel -->
-    <circle cx="50" cy="50" r="10" class="mark-red"/>
-  </g>
-
-  <!-- Wordmark (text-based for editability; swap to outlines if you have official vector) -->
-  <g transform="translate(130,88)">
-    <text x="0" y="0"
-          class="ink"
-          font-family="Arial, 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif"
-          font-weight="600"
-          font-size="56"
-          letter-spacing="1.5">
-      LONGCHEER
-    </text>
-  </g>
+  <!--
+    This uses the exact bitmap you shared, embedded inside SVG so it scales sharply on HiDPI.
+    Replace the href below with your repo path, e.g. "/assets/brand/longcheer-logo-horiz.png".
+  -->
+  <image href="/assets/brand/longcheer-logo-horiz.png"
+         x="0" y="0" width="499" height="98"
+         preserveAspectRatio="xMidYMid meet" />
 </svg>
