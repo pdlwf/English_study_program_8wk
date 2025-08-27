@@ -26,8 +26,9 @@ export function CopyButton(text) {
 
 // Accordion ------------------------------------------------------------
 // id should be unique per page (e.g. `day-1`); the returned element is a
-// `<section>` that contains a trigger button and a content panel. The
-// trigger emits `accordion:open`/`accordion:close` custom events.
+// `<section>` that contains a trigger button and a content panel.
+// Interaction is handled externally via event delegation to allow
+// a single listener for all accordion triggers on a page.
 export function Accordion({ id, title }, content, { startOpen = false } = {}) {
   const section = document.createElement('section');
   section.className = 'accordion';
@@ -54,31 +55,6 @@ export function Accordion({ id, title }, content, { startOpen = false } = {}) {
   panel.setAttribute('role', 'region');
   panel.setAttribute('aria-labelledby', trigger.id);
   if (content) panel.appendChild(content);
-
-  function open() {
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    trigger.dispatchEvent(new CustomEvent('accordion:open', { bubbles: true }));
-  }
-
-  function close() {
-    trigger.setAttribute('aria-expanded', 'false');
-    panel.hidden = true;
-    trigger.dispatchEvent(new CustomEvent('accordion:close', { bubbles: true }));
-  }
-
-  trigger.addEventListener('click', () => {
-    const expanded = trigger.getAttribute('aria-expanded') === 'true';
-    expanded ? close() : open();
-  });
-
-  // keyboard support (Space/Enter)
-  trigger.addEventListener('keydown', (e) => {
-    if (e.key === ' ' || e.key === 'Enter') {
-      e.preventDefault();
-      trigger.click();
-    }
-  });
 
   section.append(header, panel);
   return section;
@@ -148,7 +124,7 @@ export function Checklist({ items, getState, setState }) {
 // Timer ---------------------------------------------------------------
 // Simple countdown timer. Persists remaining seconds to `storageKey` in
 // localStorage whenever changed or reset.
-export function Timer({ seconds = 60, storageKey, onComplete }) {
+export function Timer({ seconds = 60, storageKey, onComplete, onTick }) {
   const stored = parseInt(localStorage.getItem(storageKey) || seconds, 10);
   let remaining = stored;
 
@@ -169,6 +145,7 @@ export function Timer({ seconds = 60, storageKey, onComplete }) {
   timer.onTick((t) => {
     remaining = t;
     localStorage.setItem(storageKey, String(remaining));
+    if (onTick) onTick(t);
     const m = String(Math.floor(t / 60)).padStart(2, '0');
     const s = String(t % 60).padStart(2, '0');
     display.textContent = `${m}:${s}`;
@@ -193,6 +170,9 @@ export function Timer({ seconds = 60, storageKey, onComplete }) {
     start.textContent = 'Start';
     localStorage.setItem(storageKey, String(seconds));
   });
+
+  // expose pause so parents can stop the timer when hiding the panel
+  container.pause = () => timer.pause();
 
   return container;
 }

@@ -9,10 +9,11 @@ function withPage(url, testFn) {
     iframe.onload = async () => {
       const win = iframe.contentWindow;
       const doc = win.document;
+      await wait(75); // allow scripts to init
       try {
         await testFn(win, doc);
       } catch (e) {
-        record({ page: url, test: 'load', status: 'FAIL', message: e.message });
+        record({ page: url, test: 'exception', status: 'FAIL', message: e.message });
       }
       resolve();
     };
@@ -240,9 +241,29 @@ export async function runAll() {
   renderResults();
 }
 
+function downloadMarkdown() {
+  const lines = [
+    '# Navigation Audit Report',
+    '',
+    `- Timestamp: ${new Date().toString()}`,
+    '',
+    '## Results Summary',
+    '',
+    '| Page | Test | Status | Message |',
+    '|------|------|--------|---------|',
+    ...results.map((r) => `| ${r.page} | ${r.test} | ${r.status} | ${r.message} |`),
+  ];
+  const blob = new Blob([lines.join('\n')], { type: 'text/markdown' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'navigation_audit.md';
+  a.click();
+}
+
 document.getElementById('run').addEventListener('click', runAll);
 document.getElementById('rerun').addEventListener('click', runAll);
 document.getElementById('download-json').addEventListener('click', downloadJSON);
+document.getElementById('download-md').addEventListener('click', downloadMarkdown);
 document.getElementById('copy-summary').addEventListener('click', () => copySummary());
 
 window.runAll = runAll;
@@ -250,3 +271,4 @@ window.runIndexTests = runIndexTests;
 window.runWeekTests = runWeekTests;
 window.runStorageSmoke = runStorageSmoke;
 window.runPrintSanity = runPrintSanity;
+window.results = results;
