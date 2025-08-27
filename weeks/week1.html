@@ -10,11 +10,14 @@
 <title>Week 1</title>
 </head>
 <body>
-<header class="stack"><a href="../index.html">← Back</a></header>
+<header class="topbar">
+  <a href="../index.html" class="back">← Back</a>
+  <h1 id="week-title" class="muted"></h1>
+</header>
 <main class="stack">
-<h1 class="muted">Week 1</h1>
-<div id="goals" class="stack"></div>
-<div id="days" class="stack"></div>
+  <section id="goals" class="stack"></section>
+  <section id="glance" class="glance" aria-label="Week progress"></section>
+  <div id="days" class="stack"></div>
 </main>
 <script type="module" src="week.js"></script>
 </body>
