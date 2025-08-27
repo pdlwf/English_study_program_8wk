@@ -1,3 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <path d="M16 0a16 16 0 1 0 16 16h-4a12 12 0 1 1-12-12V0z" fill="#D62828"/>
+<!-- longcheer-logo-mark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Longcheer Mark</title>
+  <desc id="desc">Red spiral mark used by Longcheer.</desc>
+
+  <style>
+    :root{ --brand-red:#D62828; --white:#FFFFFF; }
+    .mark-red{fill:var(--brand-red)}
+    .white{fill:var(--white)}
+  </style>
+
+  <g transform="translate(10,10)">
+    <circle cx="50" cy="50" r="50" class="mark-red"/>
+    <circle cx="50" cy="50" r="26" class="white"/>
+    <path class="white" d="
+      M 72 15
+      C 42 20, 26 44, 26 64
+      c 0 26, 18 40, 38 40
+      c 16 0, 28 -8, 36 -20
+      c -8 6 -18 10 -28 10
+      c -18 0 -30 -12 -30 -28
+      c 0 -22 20 -38 50 -46
+      Z" opacity=".98"/>
+    <circle cx="50" cy="50" r="10" class="mark-red"/>
+  </g>
 </svg>
