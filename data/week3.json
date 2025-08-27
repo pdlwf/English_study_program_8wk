@@ -1,0 +1,21 @@
+{
+  "id":3,
+  "title":"Week 3 — Supplier Coordination",
+  "goals":["Clarify supplier updates"],
+  "days":[
+    {
+      "day":1,
+      "title":"Supplier Updates",
+      "focus":"Requesting status from vendors",
+      "vocabulary":["supplier","lead time"],
+      "activities":[{"type":"speak","title":"Status request","duration":5,"instructions":"Ask for shipment date."}],
+      "quiz":{"questions":[{"q":"Lead time means…","choices":["Shipping cost","Time from order to delivery","Worker count"],"answer":1}]},
+      "flashcards":[{"term":"PO","definition":"Purchase Order"}],
+      "homework":["Email a supplier for update."],
+      "rubric":[{"dimension":"Clarity","levels":["basic","good","excellent"]}],
+      "timebox":{"total":10,"segments":[5,5]},
+      "materials":["email"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

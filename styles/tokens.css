@@ -1,0 +1,38 @@
+/* Design tokens */
+:root {
+  --ink: #111;
+  --muted: #666;
+  --card: #fff;
+  --bg: #f5f5f7;
+  --tint: #0071e3;
+  --shadow: rgba(0,0,0,.1);
+  --radius-sm: 12px;
+  --radius-lg: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --font-base: clamp(16px,2vw,18px);
+  --line-height: 1.6;
+  --transition: .2s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f5f5f7;
+    --muted: #aaa;
+    --card: #1c1c1e;
+    --bg: #000;
+    --tint: #0a84ff;
+    --shadow: rgba(0,0,0,.5);
+  }
+}
+body.dark{
+  --ink: #f5f5f7;
+  --muted: #aaa;
+  --card: #1c1c1e;
+  --bg: #000;
+  --tint: #0a84ff;
+  --shadow: rgba(0,0,0,.5);
+}

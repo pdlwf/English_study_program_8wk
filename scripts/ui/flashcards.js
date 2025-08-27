@@ -1,0 +1,2 @@
+import {Toast} from './components.js';
+export function FlashcardEngine(node,cards){let i=0,front=true;const card=document.createElement('div');card.className='flashcard';node.appendChild(card);function render(){const c=cards[i];card.textContent=front?c.term:c.definition;}render();card.addEventListener('click',()=>{front=!front;render();});const next=document.createElement('button');next.textContent='Next';next.addEventListener('click',()=>{i=(i+1)%cards.length;front=true;render();});node.appendChild(next);}

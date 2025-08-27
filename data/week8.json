@@ -1,0 +1,21 @@
+{
+  "id":8,
+  "title":"Week 8 — Final Simulation & Review",
+  "goals":["Simulate project delivery"],
+  "days":[
+    {
+      "day":1,
+      "title":"Final Presentation Prep",
+      "focus":"Organizing final simulation",
+      "vocabulary":["simulation","rehearsal"],
+      "activities":[{"type":"checklist","title":"Presentation steps","items":["Outline","Practice"]}],
+      "quiz":{"questions":[{"q":"Simulation is…","choices":["Real project","Practice run","Budget"],"answer":1}]},
+      "flashcards":[{"term":"dry run","definition":"Practice session"}],
+      "homework":["Prepare final slides."],
+      "rubric":[{"dimension":"Preparation","levels":["low","medium","high"]}],
+      "timebox":{"total":15,"segments":[5,10]},
+      "materials":["slides"]
+    }
+  ],
+  "_todo":"Add remaining days"
+}

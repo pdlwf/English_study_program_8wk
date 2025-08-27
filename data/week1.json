@@ -1,0 +1,196 @@
+{
+  "id":1,
+  "title":"Week 1 — Kickoff & Introductions",
+  "goals":[
+    "Confident self-introduction and role description",
+    "Deliver 1-minute stand-up updates",
+    "Master 12–18 industry terms"
+  ],
+  "days":[
+    {
+      "day":1,
+      "title":"Kickoff & Group Orientation",
+      "focus":"Welcome, objectives, introductions",
+      "vocabulary":["project","team","role","ODM","supplier"],
+      "activities":[
+        {"type":"speak","title":"Round-robin intro","duration":10,"instructions":"Name, role, current project."},
+        {"type":"write","title":"3-sentence self-intro","duration":10,"instructions":"Write and read aloud."},
+        {"type":"checklist","title":"Set personal goals","items":["Fluency","Accuracy","Confidence"]}
+      ],
+      "templates":[
+        "I’m responsible for …",
+        "This week my focus is …"
+      ],
+      "quiz":{"questions":[
+        {"q":"ODM stands for…","choices":["Original Design Manufacturer","Open Device Manufacturing","On-Demand Module"],"answer":0},
+        {"q":"A supplier is…","choices":["An internal tester","A vendor providing parts","A customer"],"answer":1}
+      ]},
+      "flashcards":[
+        {"term":"milestone","definition":"A planned event marking progress"},
+        {"term":"deliverable","definition":"A tangible output due at a date"},
+        {"term":"tooling","definition":"Equipment used to manufacture parts"},
+        {"term":"EVT","definition":"Engineering Validation Test phase"}
+      ],
+      "homework":[
+        "Record a 45-sec intro and self-critique (clarity, speed, pauses).",
+        "Collect 5 role-specific verbs you use daily."
+      ],
+      "rubric":[
+        {"dimension":"Clarity","levels":["basic","good","excellent"]},
+        {"dimension":"Vocabulary usage","levels":["limited","adequate","precise"]}
+      ],
+      "timebox":{"total":30,"segments":[10,10,10]},
+      "materials":["notebook","timer"]
+    },
+    {
+      "day":2,
+      "title":"Stand-up Structure",
+      "focus":"Organizing brief daily updates",
+      "vocabulary":["stand-up","blocker","ETA"],
+      "activities":[
+        {"type":"speak","title":"30-sec update","duration":5,"instructions":"Yesterday, today, blockers."},
+        {"type":"checklist","title":"Update formula","items":["Yesterday","Today","Blockers"]}
+      ],
+      "templates":["Yesterday I…","Today I will…"],
+      "quiz":{"questions":[
+        {"q":"A blocker is…","choices":["A completed task","Something preventing progress","A helpful teammate"],"answer":1},
+        {"q":"ETA means…","choices":["Estimated Time of Arrival","Engineering Test Approval","End Task Assessment"],"answer":0}
+      ]},
+      "flashcards":[
+        {"term":"DVT","definition":"Design Validation Test phase"},
+        {"term":"lead time","definition":"Time between order and delivery"},
+        {"term":"FPY","definition":"First Pass Yield"},
+        {"term":"PPM","definition":"Parts Per Million defect rate"}
+      ],
+      "homework":["Write a sample stand-up update."],
+      "rubric":[{"dimension":"Conciseness","levels":["rambling","clear","crisp"]}],
+      "timebox":{"total":20,"segments":[5,5,10]},
+      "materials":["timer"]
+    },
+    {
+      "day":3,
+      "title":"Project Roles & Responsibilities",
+      "focus":"Explaining who does what",
+      "vocabulary":["stakeholder","handoff","escalation"],
+      "activities":[
+        {"type":"roleplay","title":"Escalation scenario","duration":10,"instructions":"Practice raising an issue."},
+        {"type":"checklist","title":"Role clarity","items":["Who decides","Who informs","Who acts"]}
+      ],
+      "templates":["I am accountable for…"],
+      "quiz":{"questions":[
+        {"q":"Escalation means…","choices":["Lowering priority","Raising an issue","Hiring staff"],"answer":1},
+        {"q":"A stakeholder is…","choices":["Any interested party","Only the customer","The factory"],"answer":0}
+      ]},
+      "flashcards":[
+        {"term":"second source","definition":"Alternative supplier for risk"},
+        {"term":"acceptance criteria","definition":"Standards to accept work"},
+        {"term":"contingency plan","definition":"Fallback strategy"},
+        {"term":"risk register","definition":"List of project risks"}
+      ],
+      "homework":["Map roles on your current project."],
+      "rubric":[{"dimension":"Role clarity","levels":["vague","defined","precise"]}],
+      "timebox":{"total":25,"segments":[10,15]},
+      "materials":["notebook"]
+    },
+    {
+      "day":4,
+      "title":"Vocabulary Drill",
+      "focus":"Reinforcing industry terms",
+      "vocabulary":["kickoff","backlog"],
+      "activities":[
+        {"type":"speak","title":"Use new terms","duration":10,"instructions":"Describe your backlog."},
+        {"type":"timer","title":"Flash review","duration":5,"instructions":"Timed recall using cards."}
+      ],
+      "templates":["Our kickoff is set for…"],
+      "quiz":{"questions":[
+        {"q":"Backlog refers to…","choices":["Completed tasks","Outstanding tasks","Budget"],"answer":1},
+        {"q":"Kickoff meeting occurs…","choices":["At project end","At project start","After DVT"],"answer":1}
+      ]},
+      "flashcards":[
+        {"term":"scope","definition":"Work to be done"},
+        {"term":"change request","definition":"Formal ask to modify scope"},
+        {"term":"Gantt chart","definition":"Timeline diagram"},
+        {"term":"critical path","definition":"Sequence determining project duration"}
+      ],
+      "homework":["Create sentences with 5 new terms."],
+      "rubric":[{"dimension":"Vocabulary recall","levels":["low","medium","high"]}],
+      "timebox":{"total":15,"segments":[10,5]},
+      "materials":["flashcards"]
+    },
+    {
+      "day":5,
+      "title":"Meeting Etiquette",
+      "focus":"Polite interjections and clarifications",
+      "vocabulary":["clarify","agenda","parking lot"],
+      "activities":[
+        {"type":"speak","title":"Polite interrupt","duration":5,"instructions":"Excuse me, may I clarify…"},
+        {"type":"checklist","title":"Agenda review","items":["Purpose","Topics","Timing"]}
+      ],
+      "templates":["Could you clarify…?"],
+      "quiz":{"questions":[
+        {"q":"Agenda helps…","choices":["Track attendance","Structure the meeting","Send emails"],"answer":1},
+        {"q":"Parking lot holds…","choices":["Cars","Deferred topics","Snacks"],"answer":1}
+      ]},
+      "flashcards":[
+        {"term":"action item","definition":"Task assigned to someone"},
+        {"term":"minutes","definition":"Written record of meeting"},
+        {"term":"follow-up","definition":"Subsequent action"},
+        {"term":"timebox","definition":"Fixed duration"}
+      ],
+      "homework":["Prepare agenda for next team meeting."],
+      "rubric":[{"dimension":"Politeness","levels":["rough","courteous","graceful"]}],
+      "timebox":{"total":20,"segments":[10,10]},
+      "materials":["timer"]
+    },
+    {
+      "day":6,
+      "title":"Status Report Language",
+      "focus":"Describing progress and risks",
+      "vocabulary":["on track","slipped","mitigation"],
+      "activities":[
+        {"type":"write","title":"Status email","duration":10,"instructions":"Include risk and mitigation."},
+        {"type":"checklist","title":"Risk sentence","items":["Issue","Impact","Mitigation"]}
+      ],
+      "templates":["The schedule has slipped due to…"],
+      "quiz":{"questions":[
+        {"q":"Mitigation is…","choices":["Ignoring risk","Plan to reduce impact","Escalation"],"answer":1},
+        {"q":"On track means…","choices":["Behind schedule","Proceeding as planned","Cancelled"],"answer":1}
+      ]},
+      "flashcards":[
+        {"term":"dashboard","definition":"Visual status summary"},
+        {"term":"KPI","definition":"Key Performance Indicator"},
+        {"term":"variance","definition":"Difference from plan"},
+        {"term":"dependency","definition":"Task reliant on another"}
+      ],
+      "homework":["Send a status email to a teammate."],
+      "rubric":[{"dimension":"Risk articulation","levels":["unclear","clear","insightful"]}],
+      "timebox":{"total":25,"segments":[15,10]},
+      "materials":["notebook"]
+    },
+    {
+      "day":7,
+      "title":"Week Review & Reflection",
+      "focus":"Summarizing learning and planning next steps",
+      "vocabulary":["retrospective","lesson learned"],
+      "activities":[
+        {"type":"reflect","title":"Weekly journal","duration":15,"instructions":"What worked, what to change"},
+        {"type":"speak","title":"Share lesson","duration":5,"instructions":"One takeaway"}
+      ],
+      "templates":["One lesson I learned is…"],
+      "quiz":{"questions":[
+        {"q":"Retrospective is…","choices":["Future plan","Past review","Budget report"],"answer":1},
+        {"q":"Lesson learned is…","choices":["Issue ignored","Insight gained","Meeting type"],"answer":1}
+      ]},
+      "flashcards":[
+        {"term":"iteration","definition":"Single development cycle"},
+        {"term":"scope creep","definition":"Uncontrolled expansion of scope"},
+        {"term":"baseline","definition":"Approved plan"},
+        {"term":"closure","definition":"Formal completion"}
+      ],
+      "homework":["Plan one improvement for next week."],
+      "rubric":[{"dimension":"Reflection depth","levels":["shallow","thoughtful","insightful"]}],
+      "timebox":{"total":20,"segments":[15,5]},
+      "materials":["journal"]
+    }
+  ]
+}
