@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg">
-  <image href="/assets/brand/longcheer-logo-mark.svg" width="100%" height="100%"/>
+  <!-- Deprecated SVG wrapper: use /assets/brand/longcheer-logo-mark.png -->
+  <image href="/assets/brand/longcheer-logo-mark.png" width="100%" height="100%"/>
 </svg>

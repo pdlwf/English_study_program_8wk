@@ -1,816 +1,326 @@
 [
   {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 1,
-    "context": [
-      "",
-      "<!-- longcheer-logo-horiz.svg -->",
-      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 140\" role=\"img\" aria-labelledby=\"title desc\">"
-    ],
-    "match": "longcheer",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 3,
-    "context": [
-      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 140\" role=\"img\" aria-labelledby=\"title desc\">",
-      "  <title id=\"title\">Longcheer Logo (Horizontal)</title>",
-      "  <desc id=\"desc\">Red spiral mark with LONGCHEER wordmark in dark gray.</desc>"
-    ],
-    "match": "Longcheer",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 4,
-    "context": [
-      "  <title id=\"title\">Longcheer Logo (Horizontal)</title>",
-      "  <desc id=\"desc\">Red spiral mark with LONGCHEER wordmark in dark gray.</desc>",
-      ""
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 8,
-    "context": [
-      "    :root{",
-      "      --brand-red:#D62828;",
-      "      --brand-gray:#4A4A4A;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 9,
-    "context": [
-      "      --brand-red:#D62828;",
-      "      --brand-gray:#4A4A4A;",
-      "      --white:#FFFFFF;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 12,
-    "context": [
-      "    }",
-      "    .mark-red{fill:var(--brand-red)}",
-      "    .ink{fill:var(--brand-gray)}"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 13,
-    "context": [
-      "    .mark-red{fill:var(--brand-red)}",
-      "    .ink{fill:var(--brand-gray)}",
-      "    .white{fill:var(--white)}"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 17,
-    "context": [
-      "",
-      "  <!-- Spiral Mark (constructed with simple shapes; transparent background) -->",
-      "  <g transform=\"translate(20,20)\">"
-    ],
-    "match": "Mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 20,
-    "context": [
-      "    <!-- base red disc -->",
-      "    <circle cx=\"50\" cy=\"50\" r=\"50\" class=\"mark-red\"/>",
-      "    <!-- inner hole to form a ring -->"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 34,
-    "context": [
-      "    <!-- small inner dot to complete the spiral feel -->",
-      "    <circle cx=\"50\" cy=\"50\" r=\"10\" class=\"mark-red\"/>",
-      "  </g>"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 37,
-    "context": [
-      "",
-      "  <!-- Wordmark (text-based for editability; swap to outlines if you have official vector) -->",
-      "  <g transform=\"translate(130,88)\">"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-horiz.svg",
-    "line": 45,
-    "context": [
-      "          letter-spacing=\"1.5\">",
-      "      LONGCHEER",
-      "    </text>"
-    ],
-    "match": "LONGCHEER",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 1,
-    "context": [
-      "",
-      "<!-- longcheer-logo-mark.svg -->",
-      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-labelledby=\"title desc\">"
-    ],
-    "match": "longcheer",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 3,
-    "context": [
-      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-labelledby=\"title desc\">",
-      "  <title id=\"title\">Longcheer Mark</title>",
-      "  <desc id=\"desc\">Red spiral mark used by Longcheer.</desc>"
-    ],
-    "match": "Longcheer",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 4,
-    "context": [
-      "  <title id=\"title\">Longcheer Mark</title>",
-      "  <desc id=\"desc\">Red spiral mark used by Longcheer.</desc>",
-      ""
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 7,
-    "context": [
-      "  <style>",
-      "    :root{ --brand-red:#D62828; --white:#FFFFFF; }",
-      "    .mark-red{fill:var(--brand-red)}"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 8,
-    "context": [
-      "    :root{ --brand-red:#D62828; --white:#FFFFFF; }",
-      "    .mark-red{fill:var(--brand-red)}",
-      "    .white{fill:var(--white)}"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 13,
-    "context": [
-      "  <g transform=\"translate(10,10)\">",
-      "    <circle cx=\"50\" cy=\"50\" r=\"50\" class=\"mark-red\"/>",
-      "    <circle cx=\"50\" cy=\"50\" r=\"26\" class=\"white\"/>"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "assets/brand/longcheer-logo-mark.svg",
-    "line": 24,
-    "context": [
-      "      Z\" opacity=\".98\"/>",
-      "    <circle cx=\"50\" cy=\"50\" r=\"10\" class=\"mark-red\"/>",
-      "  </g>"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "data/week1.json",
-    "line": 37,
-    "context": [
-      "      \"flashcards\": [",
-      "        {\"term\":\"milestone\",\"definition\":\"A planned event marking progress.\"},",
-      "        {\"term\":\"deliverable\",\"definition\":\"A tangible output due at a specific date.\"},"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "data/week1.json",
-    "line": 202,
-    "context": [
-      "          {\"q\":\"FPY stands for…\",\"choices\":[\"First Pass Yield\",\"Final Product Year\",\"Factory Process Yard\"],\"answer\":0},",
-      "          {\"q\":\"Acceptance criteria are…\",\"choices\":[\"Marketing slogans\",\"Conditions that must be met to approve a build/phase\",\"Supplier discounts\"],\"answer\":1}",
-      "        ]"
-    ],
-    "match": "Mark",
-    "will_replace": false
-  },
-  {
     "file": "index.html",
     "line": 7,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"assets/brand/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"styles/tokens.css\" />"
-    ],
-    "match": "brand",
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
     "will_replace": true
   },
   {
     "file": "index.html",
     "line": 15,
-    "context": [
-      "<header class=\"toolbar\">",
-      "  <img src=\"assets/brand/longcheer-logo-horiz.svg\" alt=\"Longcheer\" class=\"brand-logo\" />",
-      "  <input id=\"search\" type=\"search\" placeholder=\"Search weeks\" aria-label=\"Search weeks\" />"
-    ],
-    "match": "brand",
+    "match": "<img src=\"/assets/brand/longcheer-logo-horiz.svg\" alt=\"Longcheer\" class=\"brand-logo\" />",
     "will_replace": true
-  },
-  {
-    "file": "index.html",
-    "line": 27,
-    "context": [
-      "<main>",
-      "  <section class=\"brand-hero\">",
-      "    <div class=\"brand-lockup\">"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "index.html",
-    "line": 28,
-    "context": [
-      "  <section class=\"brand-hero\">",
-      "    <div class=\"brand-lockup\">",
-      "      <img src=\"assets/brand/longcheer-logo-mark.svg\" alt=\"\" class=\"brand-logo\" />"
-    ],
-    "match": "brand",
-    "will_replace": false
   },
   {
     "file": "index.html",
     "line": 29,
-    "context": [
-      "    <div class=\"brand-lockup\">",
-      "      <img src=\"assets/brand/longcheer-logo-mark.svg\" alt=\"\" class=\"brand-logo\" />",
-      "      <h1>龙旗·8周英语学习计划</h1>"
-    ],
-    "match": "brand",
-    "will_replace": true
-  },
-  {
-    "file": "scripts/main.js",
-    "line": 107,
-    "context": [
-      "    const re = new RegExp(`(${q})`, 'gi');",
-      "    el.innerHTML = text.replace(re, '<mark>$1</mark>');",
-      "  });"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "scripts/ui/components.js",
-    "line": 92,
-    "context": [
-      "  fg.setAttribute('d', 'M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32');",
-      "  fg.setAttribute('stroke', 'var(--brand-red)');",
-      "  fg.setAttribute('stroke-width', '4');"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/base.css",
-    "line": 23,
-    "context": [
-      "img{max-width:100%;display:block;}",
-      "a{color:var(--brand-red);text-decoration:none;}a:hover,a:focus{color:var(--brand-red-hover);text-decoration:underline;}",
-      "input,button,select,textarea{font:inherit;color:inherit;}"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/base.css",
-    "line": 26,
-    "context": [
-      "::placeholder{color:var(--secondary);}",
-      ":focus-visible{outline:3px solid color-mix(in srgb,var(--brand-red) 40%,transparent);outline-offset:2px;border-radius:var(--radius-input);}",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/components.css",
-    "line": 8,
-    "context": [
-      "",
-      ".brand-logo{block-size:32px;inline-size:auto;height:32px;}",
-      ".brand-lockup{display:flex;align-items:center;gap:12px;}"
-    ],
-    "match": "brand",
-    "will_replace": true
-  },
-  {
-    "file": "styles/components.css",
-    "line": 9,
-    "context": [
-      ".brand-logo{block-size:32px;inline-size:auto;height:32px;}",
-      ".brand-lockup{display:flex;align-items:center;gap:12px;}",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/components.css",
-    "line": 11,
-    "context": [
-      "",
-      ".brand-hero{background:var(--brand-red);color:var(--brand-red-ink);position:relative;border-radius:16px;box-shadow:var(--shadow);padding:var(--space-6);}",
-      ".brand-hero::after{content:\"\";position:absolute;inset:0;background:url(\"/assets/brand/hero-watermark.svg\") no-repeat 0% 100%/600px auto;opacity:.08;pointer-events:none;}"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/components.css",
-    "line": 12,
-    "context": [
-      ".brand-hero{background:var(--brand-red);color:var(--brand-red-ink);position:relative;border-radius:16px;box-shadow:var(--shadow);padding:var(--space-6);}",
-      ".brand-hero::after{content:\"\";position:absolute;inset:0;background:url(\"/assets/brand/hero-watermark.svg\") no-repeat 0% 100%/600px auto;opacity:.08;pointer-events:none;}",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": true
-  },
-  {
-    "file": "styles/components.css",
-    "line": 25,
-    "context": [
-      ".btn:disabled{opacity:.5;cursor:not-allowed;} ",
-      ".btn--primary{background:var(--brand-red);color:var(--brand-red-ink);} ",
-      ".btn--primary:hover{background:var(--brand-red-hover);} "
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/components.css",
-    "line": 26,
-    "context": [
-      ".btn--primary{background:var(--brand-red);color:var(--brand-red-ink);} ",
-      ".btn--primary:hover{background:var(--brand-red-hover);} ",
-      ".btn--primary:active{transform:scale(.97);} "
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/components.css",
-    "line": 28,
-    "context": [
-      ".btn--primary:active{transform:scale(.97);} ",
-      ".btn--tinted{background:transparent;color:var(--brand-red);} ",
-      ".btn--tinted:hover{background:var(--fill);} "
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 1,
-    "context": [
-      "",
-      "/* Longcheer design tokens */",
-      ":root {"
-    ],
-    "match": "Longcheer",
-    "will_replace": true
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 37,
-    "context": [
-      "",
-      "  /* Brand */",
-      "  --brand-red: #D62828;"
-    ],
-    "match": "Brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 38,
-    "context": [
-      "  /* Brand */",
-      "  --brand-red: #D62828;",
-      "  --brand-red-ink: #FFFFFF;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 39,
-    "context": [
-      "  --brand-red: #D62828;",
-      "  --brand-red-ink: #FFFFFF;",
-      "  --brand-red-hover: #B71C1C;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 40,
-    "context": [
-      "  --brand-red-ink: #FFFFFF;",
-      "  --brand-red-hover: #B71C1C;",
-      "  --brand-red-tint: #E85D5D;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 41,
-    "context": [
-      "  --brand-red-hover: #B71C1C;",
-      "  --brand-red-tint: #E85D5D;",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 64,
-    "context": [
-      "  :root {",
-      "    --brand-red: #D03030;",
-      "    --brand-red-ink: #FFFFFF;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 65,
-    "context": [
-      "    --brand-red: #D03030;",
-      "    --brand-red-ink: #FFFFFF;",
-      "    --brand-red-hover: #B02525;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 66,
-    "context": [
-      "    --brand-red-ink: #FFFFFF;",
-      "    --brand-red-hover: #B02525;",
-      "    --brand-red-tint: #EF6A6A;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 67,
-    "context": [
-      "    --brand-red-hover: #B02525;",
-      "    --brand-red-tint: #EF6A6A;",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 85,
-    "context": [
-      "body.dark {",
-      "  --brand-red: #D03030;",
-      "  --brand-red-ink: #FFFFFF;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 86,
-    "context": [
-      "  --brand-red: #D03030;",
-      "  --brand-red-ink: #FFFFFF;",
-      "  --brand-red-hover: #B02525;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 87,
-    "context": [
-      "  --brand-red-ink: #FFFFFF;",
-      "  --brand-red-hover: #B02525;",
-      "  --brand-red-tint: #EF6A6A;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "styles/tokens.css",
-    "line": 88,
-    "context": [
-      "  --brand-red-hover: #B02525;",
-      "  --brand-red-tint: #EF6A6A;",
-      ""
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 66,
-    "context": [
-      "    const swatch = doc.createElement('div');",
-      "    swatch.style.background = 'var(--brand-red)';",
-      "    doc.body.appendChild(swatch);"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 70,
-    "context": [
-      "    const tokenBg = win.getComputedStyle(swatch).backgroundColor;",
-      "    assert(btnBg === tokenBg, 'Primary button matches --brand-red', {",
-      "      page: '/index.html',"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 77,
-    "context": [
-      "",
-      "    const hero = doc.querySelector('.brand-hero');",
-      "    assert(Boolean(hero), '.brand-hero present', { page: '/index.html', test: 'brand hero presence' });"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 78,
-    "context": [
-      "    const hero = doc.querySelector('.brand-hero');",
-      "    assert(Boolean(hero), '.brand-hero present', { page: '/index.html', test: 'brand hero presence' });",
-      "    const heroColor = win.getComputedStyle(hero).color;"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 80,
-    "context": [
-      "    const heroColor = win.getComputedStyle(hero).color;",
-      "    assert(heroColor === 'rgb(255, 255, 255)', '.brand-hero text is white', {",
-      "      page: '/index.html',"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 82,
-    "context": [
-      "      page: '/index.html',",
-      "      test: 'brand hero text',",
-      "    });"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 85,
-    "context": [
-      "",
-      "    const logo = doc.querySelector('header img, header svg');",
-      "    assert(logo && logo.getAttribute('alt') && logo.getAttribute('alt').trim().length > 0, 'Header logo has alt text', {"
-    ],
-    "match": "logo",
-    "will_replace": true
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 86,
-    "context": [
-      "    const logo = doc.querySelector('header img, header svg');",
-      "    assert(logo && logo.getAttribute('alt') && logo.getAttribute('alt').trim().length > 0, 'Header logo has alt text', {",
-      "      page: '/index.html',"
-    ],
-    "match": "logo",
-    "will_replace": true
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 88,
-    "context": [
-      "      page: '/index.html',",
-      "      test: 'header logo alt',",
-      "    });"
-    ],
-    "match": "logo",
-    "will_replace": true
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 275,
-    "context": [
-      "",
-      "function downloadMarkdown() {",
-      "  const lines = ["
-    ],
-    "match": "Mark",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 287,
-    "context": [
-      "  ];",
-      "  const blob = new Blob([lines.join('\\n')], { type: 'text/markdown' });",
-      "  const a = document.createElement('a');"
-    ],
-    "match": "mark",
-    "will_replace": false
-  },
-  {
-    "file": "tests/diagnostics.js",
-    "line": 297,
-    "context": [
-      "document.getElementById('download-json').addEventListener('click', downloadJSON);",
-      "document.getElementById('download-md').addEventListener('click', downloadMarkdown);",
-      "document.getElementById('copy-summary').addEventListener('click', () => copySummary());"
-    ],
-    "match": "Mark",
-    "will_replace": false
-  },
-  {
-    "file": "weeks/week.js",
-    "line": 330,
-    "context": [
-      "    done.className = 'btn btn--primary compact';",
-      "    done.textContent = 'Mark Day Complete';",
-      "    done.addEventListener('click', () => {"
-    ],
-    "match": "Mark",
-    "will_replace": false
-  },
-  {
-    "file": "weeks/week1.html",
-    "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/brand/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "brand",
-    "will_replace": true
-  },
-  {
-    "file": "weeks/week1.html",
-    "line": 14,
-    "context": [
-      "<header class=\"topbar\">",
-      "  <img src=\"../assets/brand/longcheer-logo-horiz.svg\" alt=\"Longcheer\" class=\"brand-logo\" />",
-      "  <div class=\"topbar-actions btn-group\">"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "weeks/week1.html",
-    "line": 25,
-    "context": [
-      "<main class=\"stack\">",
-      "  <section class=\"brand-hero\">",
-      "    <h1 id=\"week-title\"></h1>"
-    ],
-    "match": "brand",
-    "will_replace": false
-  },
-  {
-    "file": "weeks/week2.html",
-    "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
-    "will_replace": true
-  },
-  {
-    "file": "weeks/week3.html",
-    "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
-    "will_replace": true
-  },
-  {
-    "file": "weeks/week4.html",
-    "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
-    "will_replace": true
-  },
-  {
-    "file": "weeks/week5.html",
-    "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
+    "match": "<img src=\"/assets/brand/longcheer-logo-mark.svg\" alt=\"Longcheer\" class=\"brand-logo\" />",
     "will_replace": true
   },
   {
     "file": "weeks/week6.html",
     "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week4.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week2.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
     "will_replace": true
   },
   {
     "file": "weeks/week7.html",
     "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week5.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
     "will_replace": true
   },
   {
     "file": "weeks/week8.html",
     "line": 6,
-    "context": [
-      "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
-      "<link rel=\"icon\" href=\"../assets/favicon.svg\" />",
-      "<link rel=\"stylesheet\" href=\"../styles/tokens.css\" />"
-    ],
-    "match": "favicon",
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week1.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week1.html",
+    "line": 14,
+    "match": "<img src=\"/assets/brand/longcheer-logo-horiz.svg\" alt=\"Longcheer\" class=\"brand-logo\" />",
+    "will_replace": true
+  },
+  {
+    "file": "weeks/week3.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "data/week1.json",
+    "line": 37,
+    "match": "{\"term\":\"milestone\",\"definition\":\"A planned event marking progress.\"},",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 47,
+    "match": "const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 48,
+    "match": "icon.setAttribute('viewBox', '0 0 12 8');",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 49,
+    "match": "icon.classList.add('chevron');",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 50,
+    "match": "const path = document.createElementNS(icon.namespaceURI, 'path');",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 57,
+    "match": "icon.appendChild(path);",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/ui/components.js",
+    "line": 58,
+    "match": "trigger.append(titleSpan, badgeSpan, icon);",
+    "will_replace": false
+  },
+  {
+    "file": "scripts/main.js",
+    "line": 107,
+    "match": "el.innerHTML = text.replace(re, '<mark>$1</mark>');",
+    "will_replace": false
+  },
+  {
+    "file": "styles/components.css",
+    "line": 8,
+    "match": "/* Brand logo sizing */",
+    "will_replace": false
+  },
+  {
+    "file": "styles/components.css",
+    "line": 9,
+    "match": ".brand-logo{block-size:32px;inline-size:auto;height:32px;}",
+    "will_replace": false
+  },
+  {
+    "file": "styles/components.css",
+    "line": 10,
+    "match": "@media (max-width:600px){.brand-logo{block-size:24px;height:24px;}}",
+    "will_replace": false
+  },
+  {
+    "file": "styles/components.css",
+    "line": 14,
+    "match": ".brand-hero::after{content:\"\";position:absolute;inset:0;background:url(\"/assets/brand/hero-watermark.svg\") no-repeat 0% 100%/600px auto;opacity:.08;pointer-events:none;}",
+    "will_replace": false
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 85,
+    "match": "const logo = doc.querySelector('header img, header svg');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 86,
+    "match": "assert(logo && logo.getAttribute('alt') && logo.getAttribute('alt').trim().length > 0, 'Header logo has alt text', {",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 88,
+    "match": "test: 'header logo alt',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 279,
+    "match": "const legacy = /(assets\\/favicon\\.svg|assets\\/brand\\/favicon\\.svg|logo\\.(png|jpe?g)|data:image\\/svg\\+xml|longcheer-logo(?!-horiz\\.svg|-mark\\.svg))/i;",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 283,
+    "match": "assert(!match, 'no legacy logo refs', {",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 285,
+    "match": "test: 'legacy logo scan',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 293,
+    "match": "const logo = doc.querySelector('header img.brand-logo');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 295,
+    "match": "logo && logo.getAttribute('alt') && logo.getAttribute('src') === '/assets/brand/longcheer-logo-horiz.svg',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 296,
+    "match": "'header logo present',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 297,
+    "match": "{ page, test: 'header logo present' }",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 302,
+    "match": "async function assertFaviconUpdated(page) {",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 304,
+    "match": "const link = doc.querySelector('link[rel=\"icon\"]');",
+    "will_replace": false
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 306,
+    "match": "link && link.getAttribute('href') === '/assets/brand/longcheer-logo-mark.svg',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 307,
+    "match": "'favicon uses mark svg',",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 308,
+    "match": "{ page, test: 'favicon updated' }",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 317,
+    "match": "await assertFaviconUpdated('/index.html');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 318,
+    "match": "await assertFaviconUpdated('/weeks/week1.html');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/diagnostics.js",
+    "line": 346,
+    "match": "const blob = new Blob([lines.join('\\n')], { type: 'text/markdown' });",
+    "will_replace": false
+  },
+  {
+    "file": "tests/diagnostics.html",
+    "line": 6,
+    "match": "<link rel=\"icon\" href=\"/assets/brand/longcheer-logo-mark.svg\" type=\"image/svg+xml\" />",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 23,
+    "match": "const legacy = /(assets\\/favicon\\.svg|assets\\/brand\\/favicon\\.svg|logo\\.(png|jpe?g)|data:image\\/svg\\+xml|longcheer-logo(?!-horiz\\.svg|-mark\\.svg))/i;",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 27,
+    "match": "assert(!match, f, 'legacy logo scan', match?`Found ${match[0]}`:'');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 33,
+    "match": "const ok = /<img(?=[^>]*class=\"[^\"]*brand-logo[^\"]*\")(?=[^>]*src=\"\\/assets\\/brand\\/longcheer-logo-horiz.svg\")(?=[^>]*alt=\"Longcheer\")[^>]*>/i.test(html);",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 34,
+    "match": "assert(ok, file, 'header logo present', 'missing or incorrect');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 37,
+    "match": "function assertFaviconUpdated(file){",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 39,
+    "match": "const ok = /<link[^>]*rel=\"icon\"[^>]*href=\"\\/assets\\/brand\\/longcheer-logo-mark.svg\"/i.test(html);",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 40,
+    "match": "assert(ok, file, 'favicon updated', 'missing or incorrect');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 47,
+    "match": "assertFaviconUpdated('index.html');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 48,
+    "match": "assertFaviconUpdated('weeks/week1.html');",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 50,
+    "match": "fs.writeFileSync(path.join(root,'REPORTS','logo_migration_report.json'), JSON.stringify(results, null, 2));",
+    "will_replace": true
+  },
+  {
+    "file": "tests/logo_migration_checks.js",
+    "line": 53,
+    "match": "fs.writeFileSync(path.join(root,'REPORTS','logo_migration_report.md'), lines.join('\\n'));",
     "will_replace": true
   }
 ]
