@@ -316,14 +316,17 @@ function renderDays(days) {
     const footer = document.createElement('div');
     footer.className = 'day-footer';
     const prev = document.createElement('button');
+    prev.className = 'btn tinted compact';
     prev.textContent = 'Prev day';
     prev.disabled = idx === 0;
     prev.addEventListener('click', () => openDay(dayNum - 1));
     const next = document.createElement('button');
+    next.className = 'btn tinted compact';
     next.textContent = 'Next day';
     next.disabled = idx === days.length - 1;
     next.addEventListener('click', () => openDay(dayNum + 1));
     const done = document.createElement('button');
+    done.className = 'btn filled compact';
     done.textContent = 'Mark Day Complete';
     done.addEventListener('click', () => {
       const d = getDay(weekId, dayNum);

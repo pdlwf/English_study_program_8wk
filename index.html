@@ -11,16 +11,17 @@
 <title>English Program</title>
 </head>
 <body>
-<header class="stack">
-<h1>8-week English Program</h1>
-<label>Search <input id="search" type="search" placeholder="Search weeks"/></label>
-<button id="dark-toggle">Dark</button>
-<nav class="grid">
-<button id="export">Export Progress</button>
-<input id="import" type="file" class="no-print"/>
-<button id="reset">Reset Progress</button>
-<button onclick="window.print()">Print</button>
-</nav>
+<header class="toolbar">
+  <h1>8-week English Program</h1>
+  <input id="search" type="search" placeholder="Search weeks" aria-label="Search weeks" />
+  <button id="dark-toggle" class="btn tinted compact" aria-label="Toggle dark mode">🌓</button>
+  <div class="actions btn-group">
+    <button id="export" class="btn plain compact">Export</button>
+    <label for="import" class="btn plain compact no-print">Import</label>
+    <input id="import" type="file" hidden class="no-print" />
+    <button id="reset" class="btn plain compact">Reset</button>
+    <button onclick="window.print()" class="btn plain compact">Print</button>
+  </div>
 </header>
 <main>
 <section id="weeks-container" class="weeks-grid"></section>

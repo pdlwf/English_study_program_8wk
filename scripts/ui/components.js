@@ -9,14 +9,15 @@ export function Toast(msg) {
   const t = document.createElement('div');
   t.className = 'toast';
   t.textContent = msg;
+  t.setAttribute('role', 'status');
   document.body.appendChild(t);
-  setTimeout(() => t.remove(), 2000);
+  setTimeout(() => t.remove(), 2500);
 }
 
 // Copy button with toast feedback -------------------------------------
 export function CopyButton(text) {
   const btn = document.createElement('button');
-  btn.className = 'copy';
+  btn.className = 'btn tinted compact copy';
   btn.textContent = 'Copy';
   btn.addEventListener('click', () => {
     navigator.clipboard.writeText(text).then(() => Toast('Copied'));
@@ -43,7 +44,18 @@ export function Accordion({ id, title }, content, { startOpen = false } = {}) {
   titleSpan.textContent = title;
   const badgeSpan = document.createElement('span');
   badgeSpan.className = 'badges';
-  trigger.append(titleSpan, badgeSpan);
+  const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  icon.setAttribute('viewBox', '0 0 12 8');
+  icon.classList.add('chevron');
+  const path = document.createElementNS(icon.namespaceURI, 'path');
+  path.setAttribute('d', 'M2 2l4 4 4-4');
+  path.setAttribute('fill', 'none');
+  path.setAttribute('stroke', 'currentColor');
+  path.setAttribute('stroke-width', '2');
+  path.setAttribute('stroke-linecap', 'round');
+  path.setAttribute('stroke-linejoin', 'round');
+  icon.appendChild(path);
+  trigger.append(titleSpan, badgeSpan, icon);
 
   const header = document.createElement('h2');
   header.appendChild(trigger);
@@ -71,15 +83,16 @@ export function ProgressRing(percent = 0) {
 
   const bg = document.createElementNS(svg.namespaceURI, 'path');
   bg.setAttribute('d', 'M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32');
-  bg.setAttribute('stroke', 'var(--shadow)');
-  bg.setAttribute('stroke-width', '2');
+  bg.setAttribute('stroke', 'var(--fill)');
+  bg.setAttribute('stroke-width', '4');
   bg.setAttribute('fill', 'none');
 
   const fg = document.createElementNS(svg.namespaceURI, 'path');
   fg.setAttribute('d', 'M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32');
   fg.setAttribute('stroke', 'var(--tint)');
-  fg.setAttribute('stroke-width', '2');
+  fg.setAttribute('stroke-width', '4');
   fg.setAttribute('fill', 'none');
+  fg.setAttribute('stroke-linecap', 'round');
 
   function set(p) {
     const dash = (p / 100) * circ;
@@ -135,8 +148,10 @@ export function Timer({ seconds = 60, storageKey, onComplete, onTick }) {
   const controls = document.createElement('div');
   controls.className = 'timer-controls';
   const start = document.createElement('button');
+  start.className = 'btn tinted compact';
   start.textContent = 'Start';
   const reset = document.createElement('button');
+  reset.className = 'btn tinted compact';
   reset.textContent = 'Reset';
   controls.append(start, reset);
   container.append(display, controls);
@@ -209,9 +224,11 @@ export function Quiz({ questions, storageGet, storageSet }) {
 
   const submit = document.createElement('button');
   submit.type = 'submit';
+  submit.className = 'btn filled compact';
   submit.textContent = 'Submit';
   const retry = document.createElement('button');
   retry.type = 'button';
+  retry.className = 'btn tinted compact';
   retry.textContent = 'Retry';
   retry.hidden = true;
   const result = document.createElement('p');
@@ -287,14 +304,19 @@ export function Flashcards({ cards, storageGet, storageSet }) {
   card.append(term, def);
 
   const prev = document.createElement('button');
+  prev.className = 'btn tinted compact';
   prev.textContent = 'Prev';
   const next = document.createElement('button');
+  next.className = 'btn tinted compact';
   next.textContent = 'Next';
   const flip = document.createElement('button');
+  flip.className = 'btn tinted compact';
   flip.textContent = 'Flip';
   const hard = document.createElement('button');
+  hard.className = 'btn tinted compact';
   hard.textContent = 'Hard';
   const easy = document.createElement('button');
+  easy.className = 'btn tinted compact';
   easy.textContent = 'Easy';
   const controls = document.createElement('div');
   controls.className = 'flash-controls';
